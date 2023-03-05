@@ -14,6 +14,24 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+    let oddNum = 1
+    let whiteSpace = n-1
+    for (let i = 1; i <= n; i ++) {
+        let result = ''
+        for (let i = 0; i < whiteSpace; i++) {
+            result += ' '
+        }
+        for (let i = 0; i < oddNum; i++) {
+            result += '#'
+        }
+        for (let i = 0; i < whiteSpace; i++) {
+            result += ' '
+        }
+        console.log(result)
+        oddNum += 2
+        whiteSpace--
+    }
+}
 
 module.exports = pyramid;
